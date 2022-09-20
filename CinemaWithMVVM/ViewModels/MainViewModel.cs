@@ -32,16 +32,26 @@ namespace CinemaWithMVVM.ViewModels
                   int y = 10;
                   foreach (var m in movies)
                   {
-                      var uc = new MovieCellUC();
-                      uc.Width = 300;
-                      uc.Height = 200;
-                      uc.Margin = new System.Windows.Thickness(x,y,0,0);
-                   
                       var ucVM = new MovieCellViewModel
                       {
                           Movie = m,
                       };
-                      uc.DataContext = ucVM;
+
+                      var uc = new MovieCellUC(ucVM);
+
+                      var d = double.Parse(m.Rating.Replace('.',',')).ToString();
+                     
+                      double result=((double.Parse(d)+1)/2);
+                      int count = (int)(result);
+                      for (int i = 0; i < count; i++)
+                      {
+                          ucVM.StarsPanel.Children.Add(new StartUc());
+                      }
+                      uc.Width = 300;
+                      uc.Height = 200;
+                      uc.Margin = new System.Windows.Thickness(x,y,0,0);
+                   
+                     
 
                       MyPanel.Children.Add(uc);
 

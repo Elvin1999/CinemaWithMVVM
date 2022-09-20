@@ -21,12 +21,8 @@
                 <TextBlock TextWrapping="Wrap" FontSize="12" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20" Text="{Binding Movie.Rating,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
 
             </StackPanel>
-            <WrapPanel Orientation="Horizontal" Canvas.Top="90" Canvas.Left="125" Panel.ZIndex="10">
-                <local:StartUc></local:StartUc>
-                <local:StartUc></local:StartUc>
-                <local:StartUc></local:StartUc>
-                <local:StartUc></local:StartUc>
-                <local:StartUc></local:StartUc>
+            <WrapPanel Name="starsPanel" Orientation="Horizontal" Canvas.Top="90" Canvas.Left="125" Panel.ZIndex="10">
+
             </WrapPanel>
 
         </Canvas>

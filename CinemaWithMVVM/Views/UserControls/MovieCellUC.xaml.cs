@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWithMVVM.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace CinemaWithMVVM.Views.UserControls
     /// </summary>
     public partial class MovieCellUC : UserControl
     {
-        public MovieCellUC()
+        public MovieCellUC(MovieCellViewModel movieCellViewModel)
         {
             InitializeComponent();
+            movieCellViewModel.StarsPanel = starsPanel;
+            this.DataContext = movieCellViewModel;
         }
     }
 }
