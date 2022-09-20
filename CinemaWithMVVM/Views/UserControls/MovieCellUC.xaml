@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="CinemaWithMVVM.Views.UserControls.MovieCellUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaWithMVVM.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="300">
+    <Grid>
+        
+    <Rectangle Fill="DeepSkyBlue" RadiusX="20" RadiusY="20" >
+        
+   
+    </Rectangle>
+    <Canvas>
+            <Image Source="\images\mario.png" Canvas.Left="20" Canvas.Top="20" Width="100" Height="120" ></Image>
+            <TextBlock FontSize="32" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Bottom="25" Canvas.Left="20">The Mario Movie</TextBlock>
+            <TextBlock TextWrapping="Wrap" Width="150" FontSize="14" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">The Mario Movie is best bla bla bla</TextBlock>
+            
+             
+    </Canvas>
+    </Grid>
+</UserControl>
