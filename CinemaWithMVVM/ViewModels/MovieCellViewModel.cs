@@ -18,7 +18,7 @@ namespace CinemaWithMVVM.ViewModels
             get { return movie; }
             set
             {
-                movie = value; movie.Description = movie.Description.Substring(0, 30);
+                movie = value; movie.Description = movie.Description.Substring(0, 20);
                 if (movie.Name.Length >= 25)
                 {
                     movie.Name = movie.Name.Substring(0, 25);
