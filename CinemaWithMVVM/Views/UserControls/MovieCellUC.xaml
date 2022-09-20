@@ -7,17 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="300">
     <Grid>
-        
-    <Rectangle Fill="DeepSkyBlue" RadiusX="20" RadiusY="20" >
-        
-   
-    </Rectangle>
-    <Canvas>
+
+        <Rectangle Fill="DeepSkyBlue" RadiusX="20" RadiusY="20" >
+
+
+        </Rectangle>
+        <Canvas>
             <Image Source="\images\mario.png" Canvas.Left="20" Canvas.Top="20" Width="100" Height="120" ></Image>
             <TextBlock FontSize="32" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Bottom="25" Canvas.Left="20">The Mario Movie</TextBlock>
             <TextBlock TextWrapping="Wrap" Width="150" FontSize="14" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">The Mario Movie is best bla bla bla</TextBlock>
-            
-             
-    </Canvas>
+            <StackPanel Canvas.Top="70" Canvas.Left="130" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" FontSize="12" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">Imdb : </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="12" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">8.5</TextBlock>
+
+            </StackPanel>
+            <WrapPanel Orientation="Horizontal" Canvas.Top="90" Canvas.Left="125" Panel.ZIndex="10">
+                <local:StartUc></local:StartUc>
+                <local:StartUc></local:StartUc>
+                <local:StartUc></local:StartUc>
+                <local:StartUc></local:StartUc>
+                <local:StartUc></local:StartUc>
+            </WrapPanel>
+
+        </Canvas>
     </Grid>
 </UserControl>

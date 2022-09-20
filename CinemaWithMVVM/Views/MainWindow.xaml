@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CinemaWithMVVM"
+        xmlns:local="clr-namespace:CinemaWithMVVM" xmlns:local1="clr-namespace:CinemaWithMVVM.Views.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -17,8 +17,8 @@
             <Button Background="Transparent" FontSize="26" FontWeight="ExtraBlack" Width="200">Search</Button>
         </StackPanel>
 
-        <WrapPanel Grid.Row="1" Background="LightCoral">
-            
+        <WrapPanel Panel.ZIndex="2" Grid.Row="1" Background="Transparent">
+            <local1:MovieCellUC Width="300" Height="200" ></local1:MovieCellUC>
         </WrapPanel>
         
     </Grid>

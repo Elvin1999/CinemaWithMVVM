@@ -58,6 +58,9 @@
     <Compile Include="Views\UserControls\MovieCellUC.xaml.cs">
       <DependentUpon>MovieCellUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\StartUc.xaml.cs">
+      <DependentUpon>StartUc.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +74,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\UserControls\MovieCellUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\StartUc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\mario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
