@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWithMVVM.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,9 @@ namespace CinemaWithMVVM
         public MainWindow()
         {
             InitializeComponent();
+            var vm = new MainViewModel();
+            vm.MyPanel = mypanel;
+            this.DataContext = vm;
         }
     }
 }

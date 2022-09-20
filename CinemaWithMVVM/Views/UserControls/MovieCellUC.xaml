@@ -10,15 +10,15 @@
 
         <Rectangle Fill="DeepSkyBlue" RadiusX="20" RadiusY="20" >
 
-
         </Rectangle>
+
         <Canvas>
-            <Image Source="\images\mario.png" Canvas.Left="20" Canvas.Top="20" Width="100" Height="120" ></Image>
-            <TextBlock FontSize="32" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Bottom="25" Canvas.Left="20">The Mario Movie</TextBlock>
-            <TextBlock TextWrapping="Wrap" Width="150" FontSize="14" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">The Mario Movie is best bla bla bla</TextBlock>
+            <Image Source="{Binding Movie.ImagePath}" Canvas.Left="20" Canvas.Top="20" Width="100" Height="120" ></Image>
+            <TextBlock TextWrapping="Wrap" FontSize="25" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Bottom="25" Canvas.Left="20"  Text="{Binding Movie.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+            <TextBlock Text="{Binding Movie.Description,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Width="150" FontSize="14" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20"></TextBlock>
             <StackPanel Canvas.Top="70" Canvas.Left="130" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" FontSize="12" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">Imdb : </TextBlock>
-                <TextBlock TextWrapping="Wrap" FontSize="12" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20">8.5</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="12" FontWeight="ExtraBold" Foreground="White" FontFamily="Comic Sans MS" Canvas.Top="25" Canvas.Right="20" Text="{Binding Movie.Rating,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
 
             </StackPanel>
             <WrapPanel Orientation="Horizontal" Canvas.Top="90" Canvas.Left="125" Panel.ZIndex="10">
